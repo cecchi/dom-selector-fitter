@@ -1,4 +1,4 @@
-var DOMUtils          = require('js-dom-utils'),
+var DOMUtils          = require('dom-utils'),
     SelectorGenerator = require('./selector-generator');
 
 module.exports = {
