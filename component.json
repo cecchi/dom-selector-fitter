@@ -1,0 +1,14 @@
+{
+    "name": "js-selector",
+
+    "scripts": [
+        "index.js",
+        "selector-utils.js",
+        "selector-generator.js"
+    ],
+
+
+    "dependencies" : {
+        "Cecchi/dom-utils": "*"
+    }
+}
