@@ -38,8 +38,11 @@ module.exports = function Selector(elements) {
             remaining = filtered;
         }
 
-        return selectors.map(function(selector) {
-            return ancestorSelector + ' ' + selector;
-        }).join(", \n").trim();
+        return selectors
+            .map(function(selector) {
+                return SelectorUtils.makeTbodyOptional(ancestorSelector + ' ' + selector);
+            })
+            .join(", \n")
+            .trim();
     }
 }
