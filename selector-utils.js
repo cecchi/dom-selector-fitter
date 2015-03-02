@@ -41,5 +41,18 @@ module.exports = {
         }
 
         return null;
+    },
+
+    /**
+     * Transform a CSS selector to work in environments where <tbody> elements may not be added to the DOM automatically
+     *
+     * @return {String}
+     */
+    'makeTbodyOptional' : function(selector) {
+        if(/\s+tbody/.test(selector)) {
+            return selector + ', \n' + selector.replace(/(\s+)tbody.*?\>\s+/g, '$1');
+        } else {
+            return selector
+        }
     }
 }
