@@ -50,7 +50,7 @@ module.exports = {
      */
     'makeTbodyOptional' : function(selector) {
         if(/\s+tbody/.test(selector)) {
-            return selector + ', \n' + selector.replace(/(\s+)tbody.*?\>\s+/g, '$1');
+            return selector + ', \n' + selector.replace(/(\s+|^)tbody.*?\>\s+/g, '$1');
         } else {
             return selector
         }
